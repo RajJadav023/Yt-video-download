@@ -30,7 +30,7 @@ const Box = () => {
 
         try{
         // console.log("your link is : " + Link);
-        const res=await fetch("http://localhost:3000/info" ,{
+        const res=await fetch(" https://yt-video-download-p63n.onrender.com/info" ,{
             method:"POST",
             headers:{"Content-Type" : "application/json"},
             body:JSON.stringify({url : Link})
@@ -97,7 +97,7 @@ const Box = () => {
             <button
                     onClick={() => {
                         window.location.href =
-                        `http://localhost:3000/download?url=${encodeURIComponent(Link)}`;
+                        ` https://yt-video-download-p63n.onrender.com/download?url=${encodeURIComponent(Link)}`;
                     }}
                     className="hover:opacity-40 cursor-pointer mt-4 bg-green-500 text-white font-bold px-6 py-2 rounded"
                     >
@@ -107,7 +107,7 @@ const Box = () => {
                 <button
                     onClick={() => {
                         window.location.href =
-                        `http://localhost:3000/downloadVideo?url=${encodeURIComponent(Link)}`;
+                        ` https://yt-video-download-p63n.onrender.com/downloadVideo?url=${encodeURIComponent(Link)}`;
                     }}
                     className="hover:opacity-40 cursor-pointer mt-4 bg-green-500 text-white font-bold px-6 py-2 rounded"
                     >
@@ -117,7 +117,7 @@ const Box = () => {
                  <button
                     onClick={() => {
                         window.location.href =
-                        `http://localhost:3000/downloadSong?url=${encodeURIComponent(Link)}`;
+                        ` https://yt-video-download-p63n.onrender.com/downloadSong?url=${encodeURIComponent(Link)}`;
                     }}
                     className="hover:opacity-40 cursor-pointer mt-4 bg-green-500 text-white font-bold px-6 py-2 rounded"
                     >
