@@ -12,6 +12,9 @@ const Box = () => {
     const [thumbnail, setthumbnail] = useState("");
     const [duration, setduration] = useState("")
 
+   const API = "https://yt-video-download-p63n.onrender.com";
+
+
     function formatTime(sec) {
     const minutes = Math.floor(sec / 60);
     const seconds = sec % 60;
@@ -30,7 +33,7 @@ const Box = () => {
 
         try{
         // console.log("your link is : " + Link);
-        const res=await fetch("https://yt-video-download-p63n.onrender.com/info" ,{
+        const res=await fetch(`${API}/info` ,{
             method:"POST",
             headers:{"Content-Type" : "application/json"},
             body:JSON.stringify({url : Link})
@@ -97,7 +100,7 @@ const Box = () => {
             <button
                     onClick={() => {
                         window.location.href =
-                        `https://yt-video-download-p63n.onrender.com/download?url=${encodeURIComponent(Link)}`;
+                        `${API}/download?url=${encodeURIComponent(Link)}`;
                     }}
                     className="hover:opacity-40 cursor-pointer mt-4 bg-green-500 text-white font-bold px-6 py-2 rounded"
                     >
@@ -107,7 +110,7 @@ const Box = () => {
                 <button
                     onClick={() => {
                         window.location.href =
-                        `https://yt-video-download-p63n.onrender.com/downloadVideo?url=${encodeURIComponent(Link)}`;
+                        `${API}/downloadVideo?url=${encodeURIComponent(Link)}`;
                     }}
                     className="hover:opacity-40 cursor-pointer mt-4 bg-green-500 text-white font-bold px-6 py-2 rounded"
                     >
@@ -117,7 +120,7 @@ const Box = () => {
                  <button
                     onClick={() => {
                         window.location.href =
-                        `https://yt-video-download-p63n.onrender.com/downloadSong?url=${encodeURIComponent(Link)}`;
+                        `${API}/downloadSong?url=${encodeURIComponent(Link)}`;
                     }}
                     className="hover:opacity-40 cursor-pointer mt-4 bg-green-500 text-white font-bold px-6 py-2 rounded"
                     >
